@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PokeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokeVC" customModule="Pokemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2g2-Gm-NpZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubZ-fE-cnZ">
+                                <rect key="frame" x="20" y="603" width="45" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Nvp-7a-hh6"/>
+                                    <constraint firstAttribute="height" constant="44" id="XKT-N0-RcA"/>
+                                </constraints>
+                                <state key="normal" image="pokeball"/>
+                                <connections>
+                                    <action selector="RandomPoke" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwZ-uo-RE4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2g2-Gm-NpZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5KZ-L3-SNp"/>
+                            <constraint firstAttribute="bottom" secondItem="2g2-Gm-NpZ" secondAttribute="bottom" id="Dho-bx-92z"/>
+                            <constraint firstItem="ubZ-fE-cnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JZE-7L-4OJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubZ-fE-cnZ" secondAttribute="bottom" constant="20" id="VEF-se-Ext"/>
+                            <constraint firstItem="2g2-Gm-NpZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dIk-Uk-gYw"/>
+                            <constraint firstAttribute="trailing" secondItem="2g2-Gm-NpZ" secondAttribute="trailing" id="wLM-Mx-PF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="2g2-Gm-NpZ" id="I4P-pv-hHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokeball" width="97" height="96"/>
+    </resources>
+</document>
